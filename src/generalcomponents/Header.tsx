@@ -8,7 +8,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <header className=" w-full px-6 py-5 fixed bg-bgColor/50 border-b border-solid top-0 backdrop-blur-sm z-50 ">
+      <header className="shadow-sm w-full px-6 py-5 fixed bg-bgColor/50 border-b border-solid top-0 backdrop-blur-sm z-50 ">
         <div className="flex items-center">
           <div className="flex items-center flex-shrink-0 flex-grow-0 gap-3 basis-[50%]">
             <Link to="/">
