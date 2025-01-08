@@ -10,7 +10,7 @@ const Hero = () => {
     }, 3000);
   }
   return (
-    <section className="py-8 pb-16 mt-20 lg:mt-24 px-8 flex border-b border-solid">
+    <section className="py-8 pb-16 mt-20 lg:mt-24 px-5 lg:px-8 flex border-b border-solid">
       <div className="flex-shrink-0 flex-grow-0 basis-[100%] lg:basis-[50%] ">
         <h1 className="font-inter text-3xl lg:text-[44px] capitalize font-extrabold line">
           simplifying <span className="text-primary">react development</span>{" "}

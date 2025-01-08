@@ -17,11 +17,11 @@ const Functionality = () => {
 
       <div className="mt-8 lg:mt-12 flex lg:flex-row flex-col-reverse items-start">
         <div className="flex-shrink-0 flex-grow-0 lg:basis-[35%] px-4 lg:px-8 mt-4 lg:mt-20">
-          <Dates className=" rounded-md bg-secondary text-white" />
+          <Dates className=" rounded-md bg-secondary text-white text-sm py-5" />
         </div>
 
         <div className="flex-shrink-0 flex-grow-0 max-w-full lg:basis-[65%] px-4 lg:px-16 py-5">
-          <div className="bg-codeBg w-full h-full rounded-md px-3 lg:px-8 py-8">
+          <div className="bg-codeBg w-full h-full rounded-md px-3 lg:px-8 py-8 text-sm lg:text-base">
             <div className="text-bgColor overflow-x-auto">
               <p className="font-nunit">
                 <span className="text-codePurple">import</span> &#123;
