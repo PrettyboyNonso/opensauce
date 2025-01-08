@@ -1,8 +1,23 @@
-import { Copy } from "lucide-react";
+import { ChevronLeft, Copy } from "lucide-react";
+import { useNavigate } from "react-router";
 
-const Installation = () => {
+const Installation = ({
+  setSidebar,
+}: {
+  setSidebar: React.Dispatch<React.SetStateAction<string>>;
+}) => {
+  const navigate = useNavigate();
+
+  const navigateComponent = (sidebarState: string) => {
+    setSidebar(sidebarState);
+    if (sidebarState !== "components") {
+      navigate("/docs");
+    } else {
+      navigate("/components");
+    }
+  };
   return (
-    <div className="pt-[4.9rem] px-6 w-full ml-64">
+    <div className="pt-[4.9rem] px-6 max-w-full lg:max-w-[70%] lg:ml-64">
       <div className="flex font-nunit text-sm gap-2 items-center capitalize">
         <p className="text-black/70 font-semibold">docs</p>
         <p>{`>`}</p>
@@ -21,7 +36,7 @@ const Installation = () => {
           Firstly, create a React project
         </p>
 
-        <div className="mt-4 bg-codeBg w-[60%] rounded-md">
+        <div className="mt-4 bg-codeBg w-full  rounded-md">
           <div className="px-3 py-2 flex justify-between items-center">
             <div className="flex-shrink-0 flex-grow-0 basis-[22%] flex justify-between font-inter text-xs">
               {/* <p className="text-gray-400 font-bold">pnpm</p> */}
@@ -47,12 +62,12 @@ const Installation = () => {
           Secondly, install opensauce
         </p>
 
-        <div className="mt-4 bg-codeBg w-[60%] rounded-md">
+        <div className="mt-4 bg-codeBg w-full  rounded-md">
           <div className="px-3 py-2 flex justify-between items-center">
             <div className="flex-shrink-0 flex-grow-0 basis-[22%] flex justify-between font-inter text-xs">
-              <p className="text-gray-400 font-bold">pnpm</p>
+              {/* <p className="text-gray-400 font-bold">pnpm</p> */}
               <p className="text-white font-bold">npm</p>
-              <p className="text-gray-400 font-bold">yarn</p>
+              {/* <p className="text-gray-400 font-bold">yarn</p> */}
             </div>
 
             <div className="flex-shrink-0 flex-grow-0 basis-[78%] flex justify-end">
@@ -73,7 +88,7 @@ const Installation = () => {
           Lastly, import and use your desired component
         </p>
 
-        <div className="mt-4 bg-codeBg w-[60%] rounded-md px-3 py-3 text-sm">
+        <div className="mt-4 bg-codeBg w-full overflow-x-auto rounded-md px-3 py-3 text-sm">
           <div className="text-bgColor">
             <p className="font-nunit">
               <span className="text-codePurple">import</span> &#123;
@@ -99,6 +114,16 @@ const Installation = () => {
   </code>
 </pre>
           </div>
+        </div>
+      </div>
+
+      <div
+        className="w-full flex mt-7 lg:hidden justify-start items-center text-sm"
+        onClick={() => navigateComponent("introduction")}
+      >
+        <div className="bg-gray-300 flex gap-2 px-2 py-2 rounded-md font-nunit font-bold capitalize text-secondary">
+          <p>introduction</p>
+          <ChevronLeft />
         </div>
       </div>
     </div>

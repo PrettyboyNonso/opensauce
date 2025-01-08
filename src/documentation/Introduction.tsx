@@ -1,8 +1,23 @@
-import { Info } from "lucide-react";
+import { ChevronRight, Info } from "lucide-react";
+import { useNavigate } from "react-router";
 
-const Introduction = () => {
+const Introduction = ({
+  setSidebar,
+}: {
+  setSidebar: React.Dispatch<React.SetStateAction<string>>;
+}) => {
+  const navigate = useNavigate();
+
+  const navigateComponent = (sidebarState: string) => {
+    setSidebar(sidebarState);
+    if (sidebarState !== "components") {
+      navigate("/docs");
+    } else {
+      navigate("/components");
+    }
+  };
   return (
-    <div className="pt-[4.9rem] px-6 max-w-[70%] ml-64">
+    <div className="pt-[4.9rem] px-6 max-w-full lg:max-w-[70%] lg:ml-64">
       <div className="flex font-nunit text-sm gap-2 items-center capitalize">
         <p className="text-black/70 font-semibold">docs</p>
         <p>{`>`}</p>
@@ -25,7 +40,7 @@ const Introduction = () => {
       </div>
 
       <div className="w-full border-solid mt-6">
-        <div className="w-[60%] h-full border border-red-500 gap-4 bg-red-200 shadow-md flex items-start px-4 py-5 rounded-md">
+        <div className="w-full lg:w-[60%] h-full border border-red-500 gap-4 bg-red-200 shadow-md flex items-start px-4 py-5 rounded-md">
           <Info className="text-red-700 w-12" />
           <p className="text-black font-inter text-sm font-medium">
             We regret that OpenSauce v1.0 is currently available{" "}
@@ -70,6 +85,16 @@ const Introduction = () => {
             for your app.
           </li>
         </ul>
+      </div>
+
+      <div
+        className="w-full flex mt-5 lg:hidden justify-end items-center text-sm"
+        onClick={() => navigateComponent("installation")}
+      >
+        <div className="bg-gray-300 flex gap-2 px-2 py-2 rounded-md font-nunit font-bold capitalize text-secondary">
+          <p>installation</p>
+          <ChevronRight />
+        </div>
       </div>
     </div>
   );

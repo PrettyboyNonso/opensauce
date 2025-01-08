@@ -2,7 +2,7 @@ import { Dates } from "../../Date/Date";
 
 const DateComponent = () => {
   return (
-    <div className="pt-[4.9rem] px-6 w-full ml-64">
+    <div className="pt-[4.9rem] px-6 w-full lg:ml-64">
       {" "}
       <div className="flex font-nunit text-sm gap-2 items-center capitalize">
         <p className="text-black/70 font-semibold">components</p>
@@ -15,7 +15,7 @@ const DateComponent = () => {
           A simple and interactive calendar UI to view and select dates.
         </p>
       </div>
-      <div className="w-[40%] mt-12">
+      <div className="w-full lg:w-[40%] mt-12">
         <Dates className="rounded-md bg-codeBg text-white" />
       </div>
       <div className="mt-10 w-[90]">
@@ -23,7 +23,7 @@ const DateComponent = () => {
         <p className="text-sm font-nunit font-bold capitalize mt-4">
           import the component into your code{" "}
         </p>
-        <div className="mt-3 bg-codeBg w-[60%] rounded-md px-5 py-5 text-sm">
+        <div className="mt-3 bg-codeBg overflow-x-auto lg:w-[60%] rounded-md px-5 py-5 text-sm">
           <div className="text-bgColor">
             <p className="font-nunit">
               <span className="text-codePurple">import</span> &#123;
@@ -55,7 +55,7 @@ const DateComponent = () => {
           <p className="text-sm font-nunit font-bold capitalize">
             style seamlessly with tailwind
           </p>
-          <div className="mt-3 bg-codeBg w-[60%] rounded-md px-5 py-5 text-sm">
+          <div className="mt-3 bg-codeBg overflow-x-auto lg:w-[60%] rounded-md px-5 py-5 text-sm">
             <div className="text-bgColor">
               {/* prettier-ignore */}
               <pre className="mt-4 font-nunit">

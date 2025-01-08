@@ -18,7 +18,7 @@ const Sidebar = ({
     }
   };
   return (
-    <aside className="flex-shrink-0 flex-grow-0 basis-[18%] w-[18%] h-dvh  border-r border-solid pt-20 px-6 fixed">
+    <aside className="lg:block hidden flex-shrink-0 flex-grow-0 basis-[18%] w-[18%] h-dvh  border-r border-solid pt-20 px-6 fixed">
       <h2 className="font-nunit capitalize font-bold text-sm">
         getting started
       </h2>

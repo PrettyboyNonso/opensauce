@@ -14,9 +14,9 @@ const Documentation = () => {
         <div className="flex min-h-96">
           <Sidebar setSidebar={setSidebar} sidebar={sidebar} />
           {sidebar === "introduction" ? (
-            <Introduction />
+            <Introduction setSidebar={setSidebar} />
           ) : sidebar === "installation" ? (
-            <Installation />
+            <Installation setSidebar={setSidebar} />
           ) : null}
         </div>
       </section>
