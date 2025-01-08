@@ -6,9 +6,20 @@ import { useState } from "react";
 const Header = () => {
   const { setSidebar } = useSidebar();
   const [isOpen, setIsOpen] = useState(false);
+  const [theme, setTheme] = useState(sessionStorage.getItem("theme"));
+  const setThemeFunc = (color: string) => {
+    setTheme(color);
+    sessionStorage.setItem("theme", color);
+    const html = document.documentElement;
+    if (color === "dark") {
+      html.classList.add("dark");
+    } else if (color === "light") {
+      html.classList.remove("dark");
+    }
+  };
   return (
     <>
-      <header className="shadow-sm w-full px-6 py-5 fixed bg-bgColor/50 border-b border-solid top-0 backdrop-blur-sm z-50 ">
+      <header className="shadow-sm w-full px-6 py-5 fixed dark:bg-darkModeColor/50 bg-bgColor/50 dark:border-none border-b border-solid top-0 backdrop-blur-sm z-50 ">
         <div className="flex items-center">
           <div className="flex items-center flex-shrink-0 flex-grow-0 gap-3 basis-[50%]">
             <Link to="/">
@@ -21,7 +32,7 @@ const Header = () => {
               </div>
             </Link>
             <nav className="hidden lg:block">
-              <ul className="flex gap-4 items-center font-inter font-semibold mt-1 capitalize text-sm text-textColor">
+              <ul className="dark:text-white flex gap-4 items-center font-inter font-semibold mt-1 capitalize text-sm text-textColor">
                 <NavLink to="/docs">
                   <li
                     className="cursor-pointer"
@@ -45,13 +56,24 @@ const Header = () => {
           </div>
 
           <div className="items-center flex-shrink-0 flex-grow-0 gap-5 lg:gap-2 basis-[50%] flex justify-end">
-            <div className="border border-solid w-14 px-1 shadow-md rounded-2xl flex justify-between items-center">
-              <MoonIcon className="w-5 h-5 invisible text-gray-800 cursor-pointer" />
-              <SunDimIcon className="text-orange-600 cursor-pointer" />
+            <div className="border border-solid dark:border-none w-14 px-1 shadow-md rounded-2xl flex items-center">
+              <MoonIcon
+                className={`text-white ${
+                  theme === "dark" ? "visible" : "invisible"
+                } cursor-pointer flex-shrink-0 flex-grow-0 basis-[50%]`}
+                onClick={() => setThemeFunc("light")}
+              />
+
+              <SunDimIcon
+                className={`text-orange-600 cursor-pointer ${
+                  theme === "light" ? "visible" : "invisible"
+                } flex-shrink-0 flex-grow-0 basis-[50%]`}
+                onClick={() => setThemeFunc("dark")}
+              />
             </div>
 
             <div className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
-              <MenuIcon />
+              <MenuIcon className="dark:text-white" />
             </div>
           </div>
         </div>
@@ -62,7 +84,7 @@ const Header = () => {
           } w-full py-3 mt-7`}
         >
           <nav className="">
-            <ul className="flex flex-col gap-4 items-center font-inter font-semibold mt-1 capitalize text-sm text-textColor">
+            <ul className="dark:text-white flex flex-col gap-4 items-center font-inter font-semibold mt-1 capitalize text-sm text-textColor">
               <NavLink to="/docs">
                 <li
                   className="cursor-pointer"
@@ -77,7 +99,7 @@ const Header = () => {
               >
                 <li className="cursor-pointer">component</li>
               </NavLink>
-              {/* <li className="cursor-pointer">sponsor</li> */}
+
               <NavLink to="/contribute">
                 <li className="cursor-pointer">contribute</li>
               </NavLink>

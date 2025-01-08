@@ -19,14 +19,16 @@ const Introduction = ({
   return (
     <div className="pt-[4.9rem] px-6 max-w-full lg:max-w-[70%] lg:ml-64">
       <div className="flex font-nunit text-sm gap-2 items-center capitalize">
-        <p className="text-black/70 font-semibold">docs</p>
-        <p>{`>`}</p>
-        <p className="font-semibold">introduction</p>
+        <p className="dark:text-white text-black/70 font-semibold">docs</p>
+        <p className="dark:text-white">{`>`}</p>
+        <p className="dark:text-white font-semibold">introduction</p>
       </div>
 
       <div className="mt-7 w-full">
-        <h1 className="font-inter font-bold text-xl">What is opensauce?</h1>
-        <p className="mt-4 font-nunit text-sm">
+        <h1 className="dark:text-bgColor font-inter font-bold text-xl">
+          What is opensauce?
+        </h1>
+        <p className="dark:text-white mt-4 font-nunit text-sm">
           <b className="text-primary">opensauce</b> is a modern, lightweight,
           and customizable React component library designed to help you build
           elegant and consistent UIs quickly. With a focus on accessibility,
@@ -51,8 +53,10 @@ const Introduction = ({
       </div>
 
       <div className="mt-12 w-full">
-        <h1 className="font-inter font-bold text-xl">Key Features</h1>
-        <ul className="mt-4 font-nunit text-sm flex flex-col gap-4">
+        <h1 className="dark:text-bgColor font-inter font-bold text-xl">
+          Key Features
+        </h1>
+        <ul className="dark:text-white mt-4 font-nunit text-sm flex flex-col gap-4">
           <li>
             <b className="font-bold">Ease of use:</b> Opensauce is designed to
             get you started quickly. With ready-to-use, pre-built components,

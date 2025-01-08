@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #f4f5f5;
-}
-
 @font-face {
   font-family: "Azeret Mono";
   src: url("../../font/AzeretMono-VariableFont_wght.ttf") format("truetype");

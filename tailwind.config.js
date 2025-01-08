@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
@@ -12,6 +12,8 @@ export default {
       },
       colors: {
         textColor: "#06060a",
+        darkModeColor: "#121212",
+        darkModeColorTwo: "#1A1A1A",
         primary: "#3a31d8",
         codeBg: "#1e1e1e",
         accent: "#0600c2",
@@ -32,6 +34,22 @@ export default {
       backgroundColor: {
         customisedLinear:
           "linear-gradient(to right, rgb(0, 0, 0), transparent, rgb(0, 0, 0))",
+      },
+
+      keyframes: {
+        slideIn: {
+          from: { transform: "translateX(100%)" },
+          to: { transform: "translateX(-100%)" },
+        },
+        slideOut: {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(100%)" },
+        },
+      },
+
+      animation: {
+        testimonies: "slideIn 15s linear infinite",
+        testimoniesecond: "slideOut 15s linear infinite",
       },
     },
   },

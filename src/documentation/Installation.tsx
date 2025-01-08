@@ -19,20 +19,22 @@ const Installation = ({
   return (
     <div className="pt-[4.9rem] px-6 max-w-full lg:max-w-[70%] lg:ml-64">
       <div className="flex font-nunit text-sm gap-2 items-center capitalize">
-        <p className="text-black/70 font-semibold">docs</p>
-        <p>{`>`}</p>
-        <p className="font-semibold">installation</p>
+        <p className="dark:text-white text-black/70 font-semibold">docs</p>
+        <p className="dark:text-white">{`>`}</p>
+        <p className="dark:text-white font-semibold">installation</p>
       </div>
 
       <div className="mt-7 w-full">
-        <h1 className="font-inter font-bold text-xl">Installation</h1>
-        <p className="font-inter text-sm mt-1">
+        <h1 className="dark:text-bgColor font-inter font-bold text-xl">
+          Installation
+        </h1>
+        <p className="dark:text-white font-inter text-sm mt-1">
           Install and configure a package manager
         </p>
       </div>
 
       <div className="w-full mt-8">
-        <p className="text-sm font-nunit font-semibold text-gray-500">
+        <p className="dark:text-bgColor text-sm font-nunit font-semibold text-gray-500">
           Firstly, create a React project
         </p>
 
@@ -58,7 +60,7 @@ const Installation = ({
       </div>
 
       <div className="w-full mt-8">
-        <p className="text-sm font-nunit font-semibold text-gray-500">
+        <p className="dark:text-bgColor text-sm font-nunit font-semibold text-gray-500">
           Secondly, install opensauce
         </p>
 
@@ -84,7 +86,7 @@ const Installation = ({
       </div>
 
       <div className="w-full mt-8">
-        <p className="text-sm font-nunit font-semibold text-gray-500">
+        <p className="dark:text-bgColor text-sm font-nunit font-semibold text-gray-500">
           Lastly, import and use your desired component
         </p>
 

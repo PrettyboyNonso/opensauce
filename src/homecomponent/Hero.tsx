@@ -1,5 +1,6 @@
 import { Copy, CopyCheck } from "lucide-react";
 import { useState } from "react";
+import { NavLink } from "react-router";
 
 const Hero = () => {
   const [clicked, setClicked] = useState(false);
@@ -10,16 +11,16 @@ const Hero = () => {
     }, 3000);
   }
   return (
-    <section className="py-8 pb-16 mt-20 lg:mt-24 px-5 lg:px-8 flex border-b border-solid">
+    <section className="py-8 pb-16 mt-20 lg:mt-24 px-5 lg:px-8 flex border-b border-solid dark:border-none">
       <div className="flex-shrink-0 flex-grow-0 basis-[100%] lg:basis-[50%] ">
-        <h1 className="font-inter text-3xl lg:text-[44px] capitalize font-extrabold line">
+        <h1 className="font-inter text-3xl lg:text-[44px] capitalize font-extrabold line dark:text-white">
           simplifying <span className="text-primary">react development</span>{" "}
           with customizable{" "}
           <span className="bg-transparentAccent border-r-[3px] border-primary capitalize text-bgColor rounded-tl-md rounded-bl-md py-1 px-3">
             components
           </span>
         </h1>
-        <p className="mt-4 font-nunit lg:text-base text-sm">
+        <p className="mt-4 font-nunit lg:text-base text-sm dark:text-white">
           Empower your workflow with tools that simplify the complexities of
           building dynamic user interfaces. Our customizable components are
           designed to save time, boost productivity, and provide seamless
@@ -27,11 +28,13 @@ const Hero = () => {
           power of components that adapt to your needs, giving you the freedom
           to focus on creating impactful applications.
         </p>
-        <div className="mt-4 flex lg:flex-row flex-col gap-3 lg:gap-6 lg:items-center">
-          <button className="bg-secondary text-bgColor capitalize font-nunit font-semibold px-5 rounded-sm text-xs lg:text-sm py-3 lg:py-2">
-            get started
-          </button>
-          <button className=" hidden lg:flex gap-4  items-center bg-transparent border-2 border-solid text-secondary  font-nunit font-semibold px-4 rounded-sm text-sm py-2">
+        <div className="mt-6 lg:mt-4 flex lg:flex-row flex-col gap-3 lg:gap-6 lg:items-center">
+          <NavLink to="/docs">
+            <button className="bg-secondary text-bgColor capitalize font-nunit font-semibold px-5 rounded-sm text-xs lg:text-sm py-3 lg:py-2">
+              get started
+            </button>
+          </NavLink>
+          <button className="dark:text-white hidden lg:flex gap-4  items-center bg-transparent border-2 border-solid text-secondary  font-nunit font-semibold px-4 rounded-sm text-sm py-2">
             &gt; npm i @opensauce/react{" "}
             {clicked ? (
               <CopyCheck className="w-4 h-4" />

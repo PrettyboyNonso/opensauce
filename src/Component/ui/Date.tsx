@@ -5,13 +5,17 @@ const DateComponent = () => {
     <div className="pt-[4.9rem] px-6 w-full lg:ml-64">
       {" "}
       <div className="flex font-nunit text-sm gap-2 items-center capitalize">
-        <p className="text-black/70 font-semibold">components</p>
-        <p>{`>`}</p>
-        <p className="font-semibold">calender</p>
+        <p className="dark:text-white text-black/70 font-semibold">
+          components
+        </p>
+        <p className="dark:text-white">{`>`}</p>
+        <p className="font-semibold dark:text-white">calender</p>
       </div>
       <div className="mt-7 w-full">
-        <h1 className="font-inter font-bold text-xl">Calender</h1>
-        <p className="font-inter text-sm mt-1">
+        <h1 className="font-inter font-bold text-xl dark:text-white">
+          Calender
+        </h1>
+        <p className="font-inter text-sm mt-1 dark:text-white">
           A simple and interactive calendar UI to view and select dates.
         </p>
       </div>
@@ -19,8 +23,8 @@ const DateComponent = () => {
         <Dates className="rounded-md bg-codeBg text-white" />
       </div>
       <div className="mt-10 w-[90]">
-        <h1 className="font-inter font-bold text-xl">Usage</h1>
-        <p className="text-sm font-nunit font-bold capitalize mt-4">
+        <h1 className="font-inter font-bold text-xl dark:text-white">Usage</h1>
+        <p className="text-sm font-nunit font-bold capitalize mt-4 dark:text-white">
           import the component into your code{" "}
         </p>
         <div className="mt-3 bg-codeBg overflow-x-auto lg:w-[60%] rounded-md px-5 py-5 text-sm">
@@ -52,7 +56,7 @@ const DateComponent = () => {
         </div>
 
         <div className="mt-10">
-          <p className="text-sm font-nunit font-bold capitalize">
+          <p className="text-sm font-nunit font-bold capitalize dark:text-white">
             style seamlessly with tailwind
           </p>
           <div className="mt-3 bg-codeBg overflow-x-auto lg:w-[60%] rounded-md px-5 py-5 text-sm">
