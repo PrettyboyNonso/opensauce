@@ -1,3 +1,5 @@
+import { NavLink } from "react-router";
+
 const Footer = () => {
   return (
     <footer className="dark:bg-darkModeColor dark:border-none w-full border-t gap-8 lg:gap-0 relative bottom-0 z-50 bg-bgColor border-solid h-full px-5 lg:px-12 py-14 flex flex-col lg:flex-row items-center">
@@ -43,10 +45,18 @@ const Footer = () => {
         <div>
           <h2 className="font-nunit capitalize font-black text-sm">links</h2>
           <ul className="mt-2 capitalize font-nunit lg:text-sm flex flex-col gap-1 font-semibold text-xs">
-            <li>docs</li>
-            <li>components</li>
-            <li>sponsor</li>
-            <li>contribute</li>
+            <NavLink to="/docs">
+              {" "}
+              <li>docs</li>
+            </NavLink>
+            <NavLink to="/components">
+              {" "}
+              <li>components</li>
+            </NavLink>
+
+            <NavLink to="/contribute">
+              <li>contribute</li>
+            </NavLink>
           </ul>
         </div>
         <div>
@@ -54,17 +64,19 @@ const Footer = () => {
             guides
           </h2>
           <ul className="mt-2 capitalize font-nunit text-sm flex flex-col gap-1 font-semibold">
-            <li>get started</li>
+            <NavLink to="/docs">
+              <li>get started</li>
+            </NavLink>
           </ul>
         </div>
-        <div>
+        {/* <div>
           <h2 className="font-nunit capitalize font-black text-xs lg:text-sm">
             legal
           </h2>
           <ul className="mt-2 capitalize font-nunit text-sm flex flex-col gap-1 font-semibold">
             <li>privacy policy</li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

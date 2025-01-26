@@ -79,7 +79,7 @@ const Installation = ({
 
           <div className="px-2 border-t border-solid py-5">
             <p className="font-nunit text-sm text-white ">
-              npm install opensauce/react
+              npm install opensauce-react
             </p>
           </div>
         </div>
@@ -108,7 +108,7 @@ const Installation = ({
     <span className="text-codePurple">{"{"}</span>
     <br />
     <span className="text-codePurple">{" return ("}</span><br />
-    <span className="text-functionBlue">{`  <div/>`}</span><br />
+    <span className="text-functionBlue">{`  <div>`}</span><br />
     <span className="text-componentGreen">   &lt;Calender <span className="text-codeBlue">className="<span className="text-codeOrange">text-sm border-black font-mons</span>"</span>/&gt;</span><br />
     <span className="text-functionBlue">{`  </div>`}</span><br />
     <span className="text-codePurple">{"  );"}</span><br />

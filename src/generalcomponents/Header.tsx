@@ -1,12 +1,26 @@
 import { MenuIcon, MoonIcon, SunDimIcon } from "lucide-react";
 import { Link, NavLink } from "react-router";
 import useSidebar from "../context/useSidebar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
-  const { setSidebar } = useSidebar();
+  const { setSidebar, theme, setTheme } = useSidebar();
   const [isOpen, setIsOpen] = useState(false);
-  const [theme, setTheme] = useState(sessionStorage.getItem("theme"));
+
+  useEffect(() => {
+    const savedTheme = sessionStorage.getItem("theme");
+    if (!savedTheme) {
+      sessionStorage.setItem("theme", "light");
+      setTheme("light");
+    } else {
+      const html = document.documentElement;
+      if (savedTheme === "dark") {
+        html.classList.add("dark");
+      } else {
+        html.classList.remove("dark");
+      }
+    }
+  }, []);
   const setThemeFunc = (color: string) => {
     setTheme(color);
     sessionStorage.setItem("theme", color);

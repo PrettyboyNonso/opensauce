@@ -45,7 +45,7 @@ const DateComponent = () => {
     <span className="text-codePurple">{"{"}</span>
     <br />
     <span className="text-codePurple">{" return ("}</span><br />
-    <span className="text-functionBlue">{`  <div/>`}</span><br />
+    <span className="text-functionBlue">{`  <div>`}</span><br />
     <span className="text-componentGreen">   &lt;Calender <span className="text-codeBlue">className="<span className="text-codeOrange"></span>"</span>/&gt;</span><br />
     <span className="text-functionBlue">{`  </div>`}</span><br />
     <span className="text-codePurple">{"  );"}</span><br />
