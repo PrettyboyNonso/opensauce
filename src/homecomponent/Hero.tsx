@@ -5,7 +5,7 @@ import { NavLink } from "react-router";
 const Hero = () => {
   const [clicked, setClicked] = useState(false);
   async function copyCode() {
-    await navigator.clipboard.writeText("npm i @opensauce-react");
+    await navigator.clipboard.writeText("npm i opensauce-react");
     setClicked(true);
     setTimeout(() => {
       setClicked(false);
@@ -36,7 +36,7 @@ const Hero = () => {
             </button>
           </NavLink>
           <button className="dark:text-white hidden lg:flex gap-4  items-center bg-transparent border-2 border-solid text-secondary  font-nunit font-semibold px-4 rounded-sm text-sm py-2">
-            &gt; npm i @opensauce-react{" "}
+            &gt; npm i opensauce-react{" "}
             {clicked ? (
               <CopyCheck className="w-4 h-4" />
             ) : (
