@@ -1,4 +1,4 @@
-import { Dates } from "../../Date/Date";
+import { Dates } from "opensauce-component";
 
 const DateComponent = () => {
   return (
@@ -31,11 +31,9 @@ const DateComponent = () => {
           <div className="text-bgColor">
             <p className="font-nunit">
               <span className="text-codePurple">import</span> &#123;
-              <span className="text-codeBlue"> Calender </span>&#125;{" "}
+              <span className="text-codeBlue"> Dates </span>&#125;{" "}
               <span className="text-codePurple">from </span>
-              <span className="text-codeOrange ">
-                "@/components/ui/calender"
-              </span>
+              <span className="text-codeOrange ">"opensauce-component"</span>
             </p>
 
             {/* prettier-ignore */}

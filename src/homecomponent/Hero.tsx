@@ -5,7 +5,7 @@ import { NavLink } from "react-router";
 const Hero = () => {
   const [clicked, setClicked] = useState(false);
   async function copyCode() {
-    await navigator.clipboard.writeText("npm i opensauce-npm");
+    await navigator.clipboard.writeText("npm i opensauce-component");
     setClicked(true);
     setTimeout(() => {
       setClicked(false);
@@ -36,7 +36,7 @@ const Hero = () => {
             </button>
           </NavLink>
           <button className="dark:text-white hidden lg:flex gap-4  items-center bg-transparent border-2 border-solid text-secondary  font-nunit font-semibold px-4 rounded-sm text-sm py-2">
-            &gt; npm i opensauce-npm{" "}
+            &gt; npm i opensauce-component{" "}
             {clicked ? (
               <CopyCheck className="w-4 h-4" />
             ) : (
@@ -53,9 +53,7 @@ const Hero = () => {
               <span className="text-codePurple">import</span> &#123;
               <span className="text-codeBlue"> Dates </span>&#125;{" "}
               <span className="text-codePurple">from </span>
-              <span className="text-codeOrange ">
-                "@/components/ui/calender"
-              </span>
+              <span className="text-codeOrange ">"opensauce-component"</span>
             </p>
 
             {/* prettier-ignore */}

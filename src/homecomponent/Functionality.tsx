@@ -1,4 +1,4 @@
-import { Dates } from "../Date/Date";
+import { Dates } from "opensauce-component";
 
 const Functionality = () => {
   return (
@@ -27,11 +27,9 @@ const Functionality = () => {
             <div className="text-bgColor overflow-x-auto">
               <p className="font-nunit">
                 <span className="text-codePurple">import</span> &#123;
-                <span className="text-codeBlue"> Calender </span>&#125;{" "}
+                <span className="text-codeBlue"> Dates </span>&#125;{" "}
                 <span className="text-codePurple">from </span>
-                <span className="text-codeOrange ">
-                  "@/components/ui/calender"
-                </span>
+                <span className="text-codeOrange ">"opensauce-component"</span>
               </p>
 
               {/* prettier-ignore */}
@@ -42,7 +40,7 @@ const Functionality = () => {
     <br />
     <span className="text-codePurple">{" return ("}</span><br />
     <span className="text-functionBlue">{`  <div>`}</span><br />
-    <span className="text-componentGreen">   &lt;Calender <span className="text-codeBlue">className="<span className="text-codeOrange">dark:bg-black rounded-md bg-secondary text-white text-sm py-5</span>"</span>/&gt;</span> <br />
+    <span className="text-componentGreen">   &lt;Dates <span className="text-codeBlue">className="<span className="text-codeOrange">dark:bg-black rounded-md bg-secondary text-white text-sm py-5</span>"</span>/&gt;</span> <br />
 
     <span className="text-functionBlue">{`  </div>`}</span><br />
     <span className="text-codePurple">{"  );"}</span><br />

@@ -79,7 +79,7 @@ const Installation = ({
 
           <div className="px-2 border-t border-solid py-5">
             <p className="font-nunit text-sm text-white ">
-              npm i opensauce-npm
+              npm i opensauce-component
             </p>
           </div>
         </div>
@@ -94,11 +94,9 @@ const Installation = ({
           <div className="text-bgColor">
             <p className="font-nunit">
               <span className="text-codePurple">import</span> &#123;
-              <span className="text-codeBlue"> Calender </span>&#125;{" "}
+              <span className="text-codeBlue"> Dates </span>&#125;{" "}
               <span className="text-codePurple">from </span>
-              <span className="text-codeOrange ">
-                "@/components/ui/calender"
-              </span>
+              <span className="text-codeOrange ">"opensauce-component"</span>
             </p>
 
             {/* prettier-ignore */}
@@ -109,7 +107,7 @@ const Installation = ({
     <br />
     <span className="text-codePurple">{" return ("}</span><br />
     <span className="text-functionBlue">{`  <div>`}</span><br />
-    <span className="text-componentGreen">   &lt;Calender <span className="text-codeBlue">className="<span className="text-codeOrange">text-sm border-black font-mons</span>"</span>/&gt;</span><br />
+    <span className="text-componentGreen">   &lt;Dates <span className="text-codeBlue">className="<span className="text-codeOrange">text-sm border-black font-mons</span>"</span>/&gt;</span><br />
     <span className="text-functionBlue">{`  </div>`}</span><br />
     <span className="text-codePurple">{"  );"}</span><br />
     <span className="text-codePurple">{"}"}</span>
