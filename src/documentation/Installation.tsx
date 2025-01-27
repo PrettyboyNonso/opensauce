@@ -79,7 +79,7 @@ const Installation = ({
 
           <div className="px-2 border-t border-solid py-5">
             <p className="font-nunit text-sm text-white ">
-              npm install opensauce-react
+              npm i opensauce-npm
             </p>
           </div>
         </div>

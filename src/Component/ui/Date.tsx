@@ -46,7 +46,7 @@ const DateComponent = () => {
     <br />
     <span className="text-codePurple">{" return ("}</span><br />
     <span className="text-functionBlue">{`  <div>`}</span><br />
-    <span className="text-componentGreen">   &lt;Calender <span className="text-codeBlue">className="<span className="text-codeOrange"></span>"</span>/&gt;</span><br />
+    <span className="text-componentGreen">   &lt;Dates <span className="text-codeBlue">className="<span className="text-codeOrange"></span>"</span>/&gt;</span><br />
     <span className="text-functionBlue">{`  </div>`}</span><br />
     <span className="text-codePurple">{"  );"}</span><br />
     <span className="text-codePurple">{"}"}</span>
@@ -65,7 +65,7 @@ const DateComponent = () => {
               <pre className="mt-4 font-nunit">
   <code>
     <span className="text-functionBlue">{`  <div/>`}</span><br />
-    <span className="text-componentGreen">   &lt;Calender <span className="text-codeBlue bg-transparentAccent">className="<span className="text-codeOrange">rounded-md bg-black text-white</span>"</span>/&gt;</span><br />
+    <span className="text-componentGreen">   &lt;Dates <span className="text-codeBlue bg-transparentAccent">className="<span className="text-codeOrange">rounded-md bg-black text-white</span>"</span>/&gt;</span><br />
     <span className="text-functionBlue">{`  </div>`}</span><br />
   </code>
 </pre>

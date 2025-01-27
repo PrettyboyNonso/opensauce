@@ -5,7 +5,7 @@ import { NavLink } from "react-router";
 const Hero = () => {
   const [clicked, setClicked] = useState(false);
   async function copyCode() {
-    await navigator.clipboard.writeText("npm i opensauce-react");
+    await navigator.clipboard.writeText("npm i opensauce-npm");
     setClicked(true);
     setTimeout(() => {
       setClicked(false);
@@ -36,7 +36,7 @@ const Hero = () => {
             </button>
           </NavLink>
           <button className="dark:text-white hidden lg:flex gap-4  items-center bg-transparent border-2 border-solid text-secondary  font-nunit font-semibold px-4 rounded-sm text-sm py-2">
-            &gt; npm i opensauce-react{" "}
+            &gt; npm i opensauce-npm{" "}
             {clicked ? (
               <CopyCheck className="w-4 h-4" />
             ) : (
@@ -51,7 +51,7 @@ const Hero = () => {
           <div className="text-bgColor">
             <p className="font-nunit">
               <span className="text-codePurple">import</span> &#123;
-              <span className="text-codeBlue"> Calender </span>&#125;{" "}
+              <span className="text-codeBlue"> Dates </span>&#125;{" "}
               <span className="text-codePurple">from </span>
               <span className="text-codeOrange ">
                 "@/components/ui/calender"
@@ -66,7 +66,7 @@ const Hero = () => {
     <br />
     <span className="text-codePurple">{" return ("}</span><br />
     <span className="text-functionBlue">{`  <div>`}</span><br />
-    <span className="text-componentGreen">   &lt;Calender <span className="text-codeBlue">className="<span className="text-codeOrange">text-sm border-black font-mons</span>"</span>/&gt;</span><br />
+    <span className="text-componentGreen">   &lt;Dates <span className="text-codeBlue">className="<span className="text-codeOrange">text-sm border-black font-mons</span>"</span>/&gt;</span><br />
     <span className="text-functionBlue">{`  </div>`}</span><br />
     <span className="text-codePurple">{"  );"}</span><br />
     <span className="text-codePurple">{"}"}</span>
